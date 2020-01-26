@@ -71,7 +71,7 @@ public class MapFrame {
 		
 		//Creation of Side Bar Title:
 		this.sideBarTitle = new JLabel();
-		this.sideBarTitle.setIcon(new ImageIcon("C:\\Users\\jackr\\Documents\\Java Projects\\Cobblandia 6\\src\\LabelImages\\SideBarImages\\sideBarTitle.png"));
+		this.sideBarTitle.setIcon(new ImageIcon("C:\\Users\\jackr\\Documents\\GitHub\\cobblandia\\Cobblandia 6\\src\\LabelImages\\SideBarImages\\sideBarTitle.png"));
 		this.sideBarTitle.setBounds(866, 1, 305, 140);
 		this.panel.add(this.sideBarTitle);
 		
@@ -119,7 +119,7 @@ public class MapFrame {
 		//Creation of Side Bar Player Button:
 		this.sideBarPlayer = new JButton();
 		this.sideBarPlayer.setBorder(null);
-		this.sideBarPlayer.setIcon(new ImageIcon("C:\\Users\\jackr\\Documents\\Java Projects\\Cobblandia 6\\src\\LabelImages\\SideBarImages\\sideBarPlayer.png"));
+		this.sideBarPlayer.setIcon(new ImageIcon("C:\\Users\\jackr\\Documents\\GitHub\\cobblandia\\Cobblandia 6\\src\\LabelImages\\SideBarImages\\sideBarPlayer.png"));
 		this.sideBarPlayer.setBounds(866, 351, 305, 128);
 		this.sideBarPlayer.addActionListener(lForButton);
 		this.sideBarPlayer.setFocusable(false);
@@ -128,7 +128,7 @@ public class MapFrame {
 		//Creation of Side Bar Inventory Button:
 		this.sideBarInventory = new JButton();
 		this.sideBarInventory.setBorder(null);
-		this.sideBarInventory.setIcon(new ImageIcon("C:\\Users\\jackr\\Documents\\Java Projects\\Cobblandia 6\\src\\LabelImages\\SideBarImages\\sideBarInventory.png"));
+		this.sideBarInventory.setIcon(new ImageIcon("C:\\Users\\jackr\\Documents\\GitHub\\cobblandia\\Cobblandia 6\\src\\LabelImages\\SideBarImages\\sideBarInventory.png"));
 		this.sideBarInventory.setBounds(866, 489, 305, 128);
 		this.sideBarInventory.addActionListener(lForButton);
 		this.sideBarInventory.setFocusable(false);
@@ -137,7 +137,7 @@ public class MapFrame {
 		//Creation of Side Bar Journal Button:
 		this.sideBarJournal = new JButton();
 		this.sideBarJournal.setBorder(null);
-		this.sideBarJournal.setIcon(new ImageIcon("C:\\Users\\jackr\\Documents\\Java Projects\\Cobblandia 6\\src\\LabelImages\\SideBarImages\\sideBarJournal.png"));
+		this.sideBarJournal.setIcon(new ImageIcon("C:\\Users\\jackr\\Documents\\GitHub\\cobblandia\\Cobblandia 6\\src\\LabelImages\\SideBarImages\\sideBarJournal.png"));
 		this.sideBarJournal.setBounds(866, 627, 305, 128);
 		this.sideBarJournal.addActionListener(lForButton);
 		this.sideBarJournal.setFocusable(false);
@@ -146,7 +146,7 @@ public class MapFrame {
 		//Creation of Side Bar Help Button:
 		this.sideBarHelp = new JButton();
 		this.sideBarHelp.setBorder(null);
-		this.sideBarHelp.setIcon(new ImageIcon("C:\\Users\\jackr\\Documents\\Java Projects\\Cobblandia 6\\src\\LabelImages\\SideBarImages\\sideBarHelp.png"));
+		this.sideBarHelp.setIcon(new ImageIcon("C:\\Users\\jackr\\Documents\\GitHub\\cobblandia\\Cobblandia 6\\src\\LabelImages\\SideBarImages\\sideBarHelp.png"));
 		this.sideBarHelp.setBounds(866, 765, 305, 101);
 		this.sideBarHelp.addActionListener(lForButton);
 		this.sideBarHelp.setFocusable(false);
