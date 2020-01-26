@@ -47,7 +47,7 @@ public class StartFrame {
 		
 		//Creation of Title Image:
 		this.titleImage = new JLabel();
-		this.titleImage.setIcon(new ImageIcon("C:\\Users\\jackr\\Documents\\Java Projects\\Cobblandia 6\\src\\LabelImages\\TitleImages\\titleNumber.png"));
+		this.titleImage.setIcon(new ImageIcon("C:\\Users\\jackr\\Documents\\GitHub\\cobblandia\\Cobblandia 6\\src\\LabelImages\\TitleImages\\titleNumber.png"));
 		this.titleImage.setBounds(16,96,360,360);
 		this.panel.add(this.titleImage);
 		
