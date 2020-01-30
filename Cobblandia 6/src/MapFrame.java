@@ -27,6 +27,7 @@ public class MapFrame {
 	Color myDarkGreen = new Color(63, 125, 0);
 	Color myDarkRed = new Color(142, 0 ,0);
 	
+	//Initialization of Map Grid:
 	MapTile[][] mapTileGrid = new MapTile[18][18];
 	
 	//Constructor:
