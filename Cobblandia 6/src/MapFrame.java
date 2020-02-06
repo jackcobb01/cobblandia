@@ -2,10 +2,12 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class MapFrame {
+public class MapFrame extends JFrame{
+	
+	//FrameStack Object:
+    FrameStack frameStack;
 	
 	//Class Variables:
-	JFrame frame;
 	JPanel panel;
 	Universe gameUniverse;
 	Player gamePlayer;
@@ -31,13 +33,16 @@ public class MapFrame {
 	MapTile[][] mapTileGrid = new MapTile[18][18];
 	
 	//Constructor:
-	public MapFrame() {
+	public MapFrame(FrameStack frameStack) {
+		
+		//Establishment of Frame Stack Object:
+		this.frameStack = frameStack;
 		
 		//Creation of Universe:
 		this.gameUniverse = new Universe();
 				
 		//Creation of Player:
-		this.gamePlayer = new Player(0,0,0,0,0, "Jack Cobb", 1, 0, 100, 50);
+		this.gamePlayer = new Player(0,0,0,0,0, "Jack Cobb", 1, 0, 100, 50, 10, 10, 11, 11, 11, 11, 11, 11, 11);
 		this.gameUniverse.listOfWorlds[this.gamePlayer.worldLocation].worldGrid[this.gamePlayer.xMapLocation][this.gamePlayer.yMapLocation].mapGrid[this.gamePlayer.xTileLocation][this.gamePlayer.yTileLocation] = "p";		
 		
 		//Creation of Key Listener:
@@ -47,20 +52,20 @@ public class MapFrame {
 		ListenForButton lForButton = new ListenForButton();
 		
 		//Creation of Frame:
-		this.frame = new JFrame("Cobblandia VI: Return of the Loo");
-		this.frame.setSize(1172,895);
-		this.frame.setResizable(false);
-		this.frame.setLocationRelativeTo(null);
-		this.frame.setVisible(true);
-		this.frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		this.frame.addKeyListener(lForKeys);
+		this.setTitle("Cobblandia VI: Return of the Loo");
+		this.setSize(1172,895);
+		this.setResizable(false);
+		this.setLocationRelativeTo(null);
+		this.setVisible(true);
+		this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		this.addKeyListener(lForKeys);
 				
 		//Creation of Panel:
 		this.panel = new JPanel();
 		this.panel.setLayout(null);
 		this.panel.setSize(1172,895);
 		this.panel.setBackground(this.myBrown);
-		this.frame.add(this.panel);
+		this.add(this.panel);
 		
 		//Addition of MapTiles to Panel:
 		for (int i = 0; i < 18; i++) {
@@ -333,6 +338,11 @@ public class MapFrame {
 		
 	}
 	
+	//Visibility Method:	
+	public void changeVisibility(boolean result) {
+		this.setVisible(result);
+	}
+	
 	//Key Listener Class:
 	private class ListenForKeys implements KeyListener {
 
@@ -377,7 +387,7 @@ public class MapFrame {
 			// TODO Auto-generated method stub
 			
 			if (event.getSource() == sideBarPlayer) {
-				System.out.println("player");
+				frameStack.frameManagement(-1);
 			}
 			if (event.getSource() == sideBarInventory) {
 				System.out.println("inventory");

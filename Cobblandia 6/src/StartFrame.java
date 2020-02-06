@@ -2,10 +2,12 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class StartFrame {
+public class StartFrame extends JFrame{
 
+	//FrameStack Object:
+	FrameStack frameStack;
+	
 	//Class Variables:
-	JFrame frame;
 	JPanel panel;
 	JLabel titleLabel;
 	JLabel subtitleLabel;
@@ -13,25 +15,28 @@ public class StartFrame {
 	JButton newGameButton;
 	
 	//Constructor:
-	public StartFrame() {
+	public StartFrame(FrameStack frameStack) {
+		
+		//Establishment of Frame Stack Object:
+		this.frameStack = frameStack;
 		
 		//Creation of Button Listener:
 		ListenForButton lForButton = new ListenForButton();
 		
 		//Creation of Frame:
-		this.frame = new JFrame("Cobblandia VI: Return of the Loo");
-		this.frame.setSize(400,576);
-		this.frame.setResizable(false);
-		this.frame.setLocationRelativeTo(null);
-		this.frame.setVisible(true);
-		this.frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		this.setTitle("Cobblandia VI: Return of the Loo");
+		this.setSize(400,576);
+		this.setResizable(false);
+		this.setLocationRelativeTo(null);
+		this.setVisible(true);
+		this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		
 		//Creation of Panel:
 		this.panel = new JPanel();
 		this.panel.setLayout(null);
 		this.panel.setSize(400,576);
 		this.panel.setBackground(Color.LIGHT_GRAY);
-		this.frame.add(this.panel);
+		this.add(this.panel);
 		
 		//Creation of Title Label:
 		this.titleLabel = new JLabel("Welcome to Cobblandia VI");
@@ -70,8 +75,7 @@ public class StartFrame {
 			// TODO Auto-generated method stub
 			
 			if (event.getSource() == newGameButton) {
-				frame.setVisible(false);
-				MapFrame newGame = new MapFrame();
+				frameStack.startGame();
 			}
 			
 		}

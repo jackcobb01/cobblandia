@@ -9,7 +9,7 @@ public class MapTile extends JLabel {
 		
 	}
 	
-	public static void changeTileType(MapTile selectedTile, String tileType) {
+	public void changeTileType(MapTile selectedTile, String tileType) {
 		
 		if (tileType == "g") {
 			selectedTile.setIcon(new ImageIcon("C:\\Users\\jackr\\Documents\\GitHub\\cobblandia\\Cobblandia 6\\src\\LabelImages\\MapImages\\grassTile48.png"));
