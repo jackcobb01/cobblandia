@@ -8,6 +8,7 @@ public class Player {
 	int yMapLocation;
 	int worldLocation;
 	
+	char characterType; //k for knight
 	String playerName;
 	int playerLevel;
 	int playerCobbies;
@@ -25,7 +26,7 @@ public class Player {
 	int cunning; //For determining lock picking success
 	
 	//Constructor:
-	public Player(int xTileLocation, int yTileLocation, int xMapLocation, int yMapLocation, int worldLocation, String playerName, int playerLevel, int playerCobbies, int maximumHealth, int currentHealth,
+	public Player(int xTileLocation, int yTileLocation, int xMapLocation, int yMapLocation, int worldLocation, char characterType, String playerName, int playerLevel, int playerCobbies, int maximumHealth, int currentHealth,
 			      int determination, int strength, int wisdom, int combat, int sorcery, int dexterity, int craftmanship, int intelligence, int cunning) {
 		
 		//Creation of Player Location:
@@ -36,6 +37,7 @@ public class Player {
 		this.worldLocation = worldLocation;
 		
 		//Creation of Player Values:
+		this.characterType = characterType;
 		this.playerName = playerName;
 		this.playerLevel = playerLevel;
 		this.playerCobbies = playerCobbies;

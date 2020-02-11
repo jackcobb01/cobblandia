@@ -29,7 +29,7 @@ public class FrameStack {
 		}
 		
 		else if (action == -1) {
-			this.currentFrame = new PlayerFrame(this);
+			this.currentFrame = new PlayerFrame(this, this.game.gamePlayer);
 			this.game.changeVisibility(false);
 		}
 	}

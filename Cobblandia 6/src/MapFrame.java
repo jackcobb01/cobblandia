@@ -23,14 +23,15 @@ public class MapFrame extends JFrame{
 	JButton sideBarJournal;
 	JButton sideBarHelp;
 	
+	//Initialization of Map Grid:
+	MapTile[][] mapTileGrid = new MapTile[18][18];
+	
 	//Class Colours:
 	Color myBrown = new Color(106, 66, 45);
 	Color myBeige = new Color(239, 209, 157);
 	Color myDarkGreen = new Color(63, 125, 0);
 	Color myDarkRed = new Color(142, 0 ,0);
 	
-	//Initialization of Map Grid:
-	MapTile[][] mapTileGrid = new MapTile[18][18];
 	
 	//Constructor:
 	public MapFrame(FrameStack frameStack) {
@@ -42,7 +43,7 @@ public class MapFrame extends JFrame{
 		this.gameUniverse = new Universe();
 				
 		//Creation of Player:
-		this.gamePlayer = new Player(0,0,0,0,0, "Jack Cobb", 1, 0, 100, 50, 10, 10, 11, 11, 11, 11, 11, 11, 11);
+		this.gamePlayer = new Player(0,0,0,0,0, 'k', "Jack Cobb", 1, 0, 100, 50, 10, 10, 11, 11, 11, 11, 11, 11, 11);
 		this.gameUniverse.listOfWorlds[this.gamePlayer.worldLocation].worldGrid[this.gamePlayer.xMapLocation][this.gamePlayer.yMapLocation].mapGrid[this.gamePlayer.xTileLocation][this.gamePlayer.yTileLocation] = "p";		
 		
 		//Creation of Key Listener:
@@ -91,7 +92,7 @@ public class MapFrame extends JFrame{
 		//Creation of Health Bar:
 		this.healthBar = new JProgressBar();
 		this.healthBar.setMaximum(this.gamePlayer.maximumHealth);
-		this.healthBar.setValue(this.gamePlayer.maximumHealth);
+		this.healthBar.setValue(this.gamePlayer.currentHealth);
 		this.healthBar.setFont(new Font("Bahnshrift",Font.BOLD,24));
 		this.healthBar.setStringPainted(true);
 		this.healthBar.setBackground(this.myDarkRed);
