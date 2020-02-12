@@ -43,7 +43,7 @@ public class MapFrame extends JFrame{
 		this.gameUniverse = new Universe();
 				
 		//Creation of Player:
-		this.gamePlayer = new Player(0,0,0,0,0, 'k', "Jack Cobb", 1, 0, 100, 50, 10, 10, 11, 11, 11, 11, 11, 11, 11);
+		this.gamePlayer = new Player(0,0,0,0,0, 'k', "Jack Cobb", 1, 0, 100, 50, 11, 11, 11, 11, 11, 11, 11, 11, 11);
 		this.gameUniverse.listOfWorlds[this.gamePlayer.worldLocation].worldGrid[this.gamePlayer.xMapLocation][this.gamePlayer.yMapLocation].mapGrid[this.gamePlayer.xTileLocation][this.gamePlayer.yTileLocation] = "p";		
 		
 		//Creation of Key Listener:
@@ -312,7 +312,6 @@ public class MapFrame extends JFrame{
 	}
 	
 	//Player Movement Map Tile Change Method:
-	
 	public static void mapTilePlayerMovement(MapTile[][] mapTileGrid, Player gamePlayer, String tileType) {
 		
 		mapTileGrid[gamePlayer.xTileLocation][gamePlayer.yTileLocation].changeTileType(mapTileGrid[gamePlayer.xTileLocation][gamePlayer.yTileLocation], tileType);
