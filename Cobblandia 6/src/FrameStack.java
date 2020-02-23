@@ -14,21 +14,23 @@ public class FrameStack {
 	//Start Game Function:
 	public void startGame() {
 		this.currentFrame.dispose();;
-		this.game = new MapFrame(this);
+		this.currentFrame = new CreationFrame(this);
+	}
+	
+	//Character Creator Function:
+	public void createCharacter(Player newPlayer) {
+		this.currentFrame.dispose();
+		this.game = new MapFrame(this, newPlayer);
 	}
 	
 	//Frame Management Function:
 	public void frameManagement(int action) {
+		
 		if (action == 0) {
 			this.currentFrame.dispose();
 			this.game.changeVisibility(true);
 		}
 		else if (action == 1) {
-			this.currentFrame.dispose();
-			this.game.changeVisibility(true);
-		}
-		
-		else if (action == -1) {
 			this.currentFrame = new PlayerFrame(this, this.game.gamePlayer);
 			this.game.changeVisibility(false);
 		}

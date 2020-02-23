@@ -34,7 +34,7 @@ public class MapFrame extends JFrame{
 	
 	
 	//Constructor:
-	public MapFrame(FrameStack frameStack) {
+	public MapFrame(FrameStack frameStack, Player gamePlayer) {
 		
 		//Establishment of Frame Stack Object:
 		this.frameStack = frameStack;
@@ -43,7 +43,7 @@ public class MapFrame extends JFrame{
 		this.gameUniverse = new Universe();
 				
 		//Creation of Player:
-		this.gamePlayer = new Player(0,0,0,0,0, 'k', "Jack Cobb", 1, 0, 100, 50, 11, 11, 11, 11, 11, 11, 11, 11, 11);
+		this.gamePlayer = gamePlayer;
 		this.gameUniverse.listOfWorlds[this.gamePlayer.worldLocation].worldGrid[this.gamePlayer.xMapLocation][this.gamePlayer.yMapLocation].mapGrid[this.gamePlayer.xTileLocation][this.gamePlayer.yTileLocation] = "p";		
 		
 		//Creation of Key Listener:
@@ -387,7 +387,7 @@ public class MapFrame extends JFrame{
 			// TODO Auto-generated method stub
 			
 			if (event.getSource() == sideBarPlayer) {
-				frameStack.frameManagement(-1);
+				frameStack.frameManagement(1);
 			}
 			if (event.getSource() == sideBarInventory) {
 				System.out.println("inventory");

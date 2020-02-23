@@ -188,7 +188,7 @@ public class PlayerFrame extends JFrame{
 			// TODO Auto-generated method stub
 			
 			if (event.getSource() == exitButton) {
-				frameStack.frameManagement(1);
+				frameStack.frameManagement(0);
 			}
 			
 		}
