@@ -1,14 +1,15 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import java.io.*;
 
 public class StartFrame extends JFrame{
 
 	//FrameStack Object:
 	FrameStack frameStack;
 	
-	//Class image file path:
-	String startFramePath = "C:\\Users\\jackr\\Documents\\Java Projects\\Cobblandia\\src\\LabelImages\\TitleImages\\";
+	//Class image file paths:
+	String titleImagePath = "/LabelImages/TitleImages/titleNumber.png";
 	
 	//Class Variables:
 	JPanel panel;
@@ -25,7 +26,7 @@ public class StartFrame extends JFrame{
 		
 		//Creation of Button Listener:
 		ListenForButton lForButton = new ListenForButton();
-		
+
 		//Creation of Frame:
 		this.setTitle("Cobblandia VI: Return of the Loo");
 		this.setSize(400,576);
@@ -55,8 +56,8 @@ public class StartFrame extends JFrame{
 		
 		//Creation of Title Image:
 		this.titleImage = new JLabel();
-		this.titleImage.setIcon(new ImageIcon(startFramePath + "si.png"));
-		this.titleImage.setBounds(16,96,50,50);
+		this.titleImage.setIcon(new ImageIcon(StartFrame.class.getResource(titleImagePath)));
+		this.titleImage.setBounds(20,96,360,360);
 		this.panel.add(this.titleImage);
 		
 		//Creation of New Game Button:
@@ -67,6 +68,8 @@ public class StartFrame extends JFrame{
 		this.newGameButton.setBorder(null);
 		this.newGameButton.addActionListener(lForButton);
 		this.panel.add(this.newGameButton);
+		
+		this.repaint();
 	}
 	
 	//Button Listener Class:

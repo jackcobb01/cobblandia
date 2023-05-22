@@ -8,7 +8,10 @@ public class PlayerFrame extends JFrame{
 	FrameStack frameStack;
 	
 	//Class image file path:
-	String playerFramePath = "C:\\Users\\jackr\\OneDrive\\Documents\\Java Projects\\The Cobblandia\\src\\LabelImages\\PlayerFrameImages\\";
+	String playerPortraitPath = "/LabelImages/PlayerFrameImages/playerFrameKnightProfile.png";
+	String playerColumnOnePath = "/LabelImages/PlayerFrameImages/playerFrameColumnOne.png";
+	String playerWideColumnPath = "/LabelImages/PlayerFrameImages/playerFrameWideColumn.png";
+	String playerExitPath = "/LabelImages/PlayerFrameImages/playerFrameExit.png";
 
 	//Class Constants:
 	int skillCap = 100;
@@ -77,7 +80,7 @@ public class PlayerFrame extends JFrame{
 		
 		//Creation of Player Portrait:
 		this.playerPortrait = new JLabel();
-		this.playerPortrait.setIcon(new ImageIcon(playerFramePath + "playerFrameKnightProfile.png"));
+		this.playerPortrait.setIcon(new ImageIcon(PlayerFrame.class.getResource(playerPortraitPath)));
 		this.playerPortrait.setBounds(44,66,280,190);
 		this.panel.add(this.playerPortrait);
 		
@@ -140,18 +143,18 @@ public class PlayerFrame extends JFrame{
 		
 		//Creation of Background Columns:
 		this.columnOne = new JLabel();
-		this.columnOne.setIcon(new ImageIcon(playerFramePath + "playerFrameColumnOne.png"));
+		this.columnOne.setIcon(new ImageIcon(PlayerFrame.class.getResource(playerColumnOnePath)));
 		this.columnOne.setBounds(1,1,366,468);
 		this.panel.add(this.columnOne);
 		this.columnTwo = new JLabel();
-		this.columnTwo.setIcon(new ImageIcon(playerFramePath + "playerFrameWideColumn.png"));
+		this.columnTwo.setIcon(new ImageIcon(PlayerFrame.class.getResource(playerWideColumnPath)));
 		this.columnTwo.setBounds(367,1,664,468);
 		this.panel.add(this.columnTwo);
 		
 		//Creation of Exit Frame Button:
 		this.exitButton = new JButton();
 		this.exitButton.setBorder(null);
-		this.exitButton.setIcon(new ImageIcon(playerFramePath + "playerFrameExit.png"));
+		this.exitButton.setIcon(new ImageIcon(PlayerFrame.class.getResource(playerExitPath)));
 		this.exitButton.setBounds(363,478,306,128);
 		this.exitButton.addActionListener(lForButton);
 		this.panel.add(this.exitButton);

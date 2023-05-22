@@ -7,9 +7,14 @@ public class CreationFrame extends JFrame{
 	//FrameStack Object:
 	FrameStack frameStack;
 	
-	//Class image file path:
-	String creationFramePath = "C:\\Users\\jackr\\OneDrive\\Documents\\Java Projects\\The Cobblandia\\src\\LabelImages\\CreationFrameImages\\";
-
+	//Class image file paths:
+	String creationFrameBackgroundPath = "/LabelImages/CreationFrameImages/creationFrameBackground.png";
+	String continueImagePath = "/LabelImages/CreationFrameImages/continue.png";
+	String p1ImagePath = "/LabelImages/CreationFrameImages/p1Image.png";
+	String p5ImagePath = "/LabelImages/CreationFrameImages/p5Image.png";
+	String m1ImagePath = "/LabelImages/CreationFrameImages/m1Image.png";
+	String m5ImagePath = "/LabelImages/CreationFrameImages/m5Image.png";
+	
 	//Class Constants:
 	int skillCap = 100;
 	int availablePoints = 50;
@@ -226,14 +231,14 @@ public class CreationFrame extends JFrame{
 		
 		//Creation of Background:
 		this.background = new JLabel();
-		this.background.setIcon(new ImageIcon(creationFramePath + "creationFrameBackground.png"));
+		this.background.setIcon(new ImageIcon(CreationFrame.class.getResource(creationFrameBackgroundPath)));
 		this.background.setBounds(1,1,882,590);
 		this.panel.add(this.background);
 		
 		//Creation of Continue Button and Label:
 		this.continueButton = new JButton();
 		this.continueButton.setBorder(null);
-		this.continueButton.setIcon(new ImageIcon(creationFramePath + "continue.png"));
+		this.continueButton.setIcon(new ImageIcon(CreationFrame.class.getResource(continueImagePath)));
 		this.continueButton.setBounds(294,591,306,128);
 		this.continueButton.addActionListener(lForButton);
 		this.panel.add(this.continueButton);
@@ -274,16 +279,16 @@ public class CreationFrame extends JFrame{
 	public JButton buttonCreator(JPanel panel, int typeOfButton, ListenForButton lForButton, int xLocation, int yLocation) {
 		JButton button = new JButton();
 		if (typeOfButton == 1) {
-			button.setIcon(new ImageIcon(creationFramePath + "p1Image.png"));
+			button.setIcon(new ImageIcon(CreationFrame.class.getResource(p1ImagePath)));
 		}
 		else if (typeOfButton == 5) {
-			button.setIcon(new ImageIcon(creationFramePath + "p5Image.png"));
+			button.setIcon(new ImageIcon(CreationFrame.class.getResource(p5ImagePath)));
 		}
 		else if (typeOfButton == -1) {
-			button.setIcon(new ImageIcon(creationFramePath + "m1Image.png"));
+			button.setIcon(new ImageIcon(CreationFrame.class.getResource(m1ImagePath)));
 		}
 		else {
-			button.setIcon(new ImageIcon(creationFramePath + "m5Image.png"));
+			button.setIcon(new ImageIcon(CreationFrame.class.getResource(m5ImagePath)));
 		}
 		button.setBounds(xLocation,yLocation,30,30);
 		button.setBorder(null);
